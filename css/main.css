@@ -1,0 +1,242 @@
+body {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+#app {
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 18px;
+  box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 50px;
+  background-color: #f1f1f1;
+  box-shadow: 0px 40px 30px -20px rgba(0, 0, 0, 0.3);
+}
+
+#app .title {
+  color: #000;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.btn-orange {
+  background-color: #f2ae1c;
+  color: #fff;
+}
+
+.btn-darkgray {
+  background-color: #222;
+  color: #fff;
+}
+
+.btn-lightgray {
+  background-color: #b6b8ba;
+  color: #000;
+}
+
+/* Header */
+#header {
+  min-height: 60px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+}
+
+#header .container {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+#header .container .menu {
+  display: flex;
+  gap: 10px;
+}
+
+#header .container .menu li {
+  padding: 10px 15px;
+}
+
+#header .container .menu .active {
+  border-bottom: 2px solid #000;
+}
+
+#Calculator {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  grid-column: 1 / 5;
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  color: #000;
+  text-align: right;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+#Calculator:focus {
+  outline: 2px solid #4393e4;
+}
+
+#app .app-container.calculator {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+#app .calculator button {
+  cursor: pointer;
+  border-radius: 15px;
+  height: 60px;
+  font-size: 24px;
+  border: none;
+}
+
+#app .app-container .grid-2 {
+  grid-column: 1 / 3;
+}
+
+/* To Do List */
+#to-do-form {
+  display: flex;
+  position: relative;
+}
+
+#to-do-form input {
+  width: 100%;
+  min-height: 45px;
+  box-sizing: border-box;
+  border-radius: 50px;
+  border: none;
+  padding: 0 20px;
+}
+
+#to-do-form input:focus {
+  box-shadow: inset 0 0 0 3px rgba(0, 125, 250, 0.6);
+  outline: none;
+  border: 1px solid rgba(0, 125, 250, 0.6);
+}
+
+#to-do-form .add-btn {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  font-size: 24px;
+  top: 0;
+  right: 0;
+  border: none;
+  background: transparent;
+}
+
+.to-do-list ul {
+  padding: 30px 0;
+}
+
+.to-do-list ul li {
+  position: relative;
+  color: #000;
+  padding: 0px 10px;
+  height: 3rem;
+  border-radius: 5px;
+  line-height: 3rem;
+  transition: all 0.3s;
+}
+
+.to-do-list ul li:hover {
+  background: #d6d6d6;
+}
+
+.to-do-list .remove {
+  padding: 5px 7px;
+}
+
+.to-do-list .remove i {
+  font-size: 12px;
+}
+
+.to-do-list ul li .left {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+/* calendar */
+#calendar {
+}
+
+#calendar .calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#calendar .calendar-header .currentMonth {
+  font-size: 20px;
+}
+
+#calendar .calendar-header .month {
+  font-weight: 700;
+}
+
+#calendar .calendar-header .next,
+#calendar .calendar-header .prev {
+  cursor: pointer;
+  padding: 10px;
+}
+
+#calendar span {
+  margin: 3px;
+}
+
+#calendar .week {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#calendar .week span {
+  color: #666;
+  text-align: center;
+}
+
+#calendar .dates {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+#calendar .dates button {
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  border: none;
+  transition: all 0.5s;
+}
+
+#calendar .dates .date:hover {
+  background: #d6d6d6;
+}
+
+#calendar .dates .date:focus {
+  background: rgba(0, 125, 250, 0.6);
+  color: #fff;
+  font-weight: 600;
+  outline: none;
+}

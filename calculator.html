@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>계산기</title>
+  </head>
+    <header id="header">
+      <div class="container">
+        <ul class="menu">
+          <li class="active"><a href="/calculator.html">계산기</a></li>
+          <li><a href="/to-do-list.html">할일 리스트</a></li>
+          <li><a href="/calendar.html">달력</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="app">
+      <h1 class="title">계산기</h1>
+      <div class="app-container calculator">
+        <input type="text" id="Calculator" value="0" onfocus="removeZero();" />
+        <button class="btn-lightgray" onclick="reset();">AC</button>
+        <button class="btn-lightgray" onclick="plusMinus();">+/-</button>
+        <button class="btn-lightgray" onclick="percent();">%</button>
+        <button class="btn-orange" onclick="Calculate('/');">÷</button>
+        <button class="btn-darkgray" onclick="InputNumber(7);">7</button>
+        <button class="btn-darkgray" onclick="InputNumber(8);">8</button>
+        <button class="btn-darkgray" onclick="InputNumber(9);">9</button>
+        <button class="btn-orange" onclick="Calculate('*');">×</button>
+        <button class="btn-darkgray" onclick="InputNumber(4);">4</button>
+        <button class="btn-darkgray" onclick="InputNumber(5);">5</button>
+        <button class="btn-darkgray" onclick="InputNumber(6);">6</button>
+        <button class="btn-orange" onclick="Calculate('-');">-</button>
+        <button class="btn-darkgray" onclick="InputNumber(1);">1</button>
+        <button class="btn-darkgray" onclick="InputNumber(2);">2</button>
+        <button class="btn-darkgray" onclick="InputNumber(3);">3</button>
+        <button class="btn-orange" id="plus" onclick="Calculate('+');">
+          +
+        </button>
+        <button class="grid-2 btn-darkgray" onclick="InputNumber(0);">0</button>
+        <button class="btn-darkgray" onclick="InputPoint();">.</button>
+        <button class="btn-orange" onclick="Calculate();">=</button>
+      </div>
+    </div>
+  </body>
+  <script src="js/calculator.js"></script>
+</html>

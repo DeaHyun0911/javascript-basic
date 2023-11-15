@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>달력</title>
+  </head>
+    <header id="header">
+      <div class="container">
+        <ul class="menu">
+          <li><a href="/calculator.html">계산기</a></li>
+          <li><a href="/to-do-list.html">할일 리스트</a></li>
+          <li class="active"><a href="/calendar.html">달력</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="app">
+      <h1 class="title">달력</h1>
+      <div id="calendar">
+        <!-- 달력 헤드, 네비게이션 -->
+        <div class="calendar-header">
+          <a class="prev"><i class="fa-solid fa-angle-left"></i></a>
+          <div class="currentMonth">
+            <span class="month"></span>
+            <span class="year"></span>
+          </div>
+          <a class="next"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+        <!-- 요일 -->
+        <div class="week">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+        <!-- 날짜 -->
+        <div class="dates">
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+    crossorigin="anonymous"
+  ></script>
+  <script src="js/calendar.js"></script>
+</html>
