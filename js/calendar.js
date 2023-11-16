@@ -5,7 +5,9 @@ const Week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 buildCalender()
 
-console.log(toDate);
+Week.forEach((data) => {
+  $('.week').append(`<span>${data}</span>`)
+})
 
 // 달력 생성
 function buildCalender() {
@@ -14,9 +16,12 @@ function buildCalender() {
   let firstDayWeek = firstDate.getDay()
   let currentMonth = today.getMonth();
 
+
   // 달, 년 생성
   $('.month').text(months[currentMonth])
   $('.year').text(today.getFullYear())
+
+
 
   // 날짜 초기화
   $('.dates').html("");
@@ -40,7 +45,6 @@ function buildCalender() {
   }
 
 }
-
 
 
 

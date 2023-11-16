@@ -116,7 +116,6 @@ document.addEventListener('keydown', function (event) {
 
 // 리셋 버튼
 function reset() {
-  let input = document.getElementById('Calculator');
   currentValue = 0;
   operator = '';
   input.value = '0';

@@ -6,6 +6,7 @@ let newToDos = JSON.parse(toDos) || [];
 updateToDoList();
 
 button.addEventListener('click', function (e) {
+  e.preventDefault();
   let value = input.value
   let todoItem = localStorage.getItem('item');
 
@@ -18,7 +19,11 @@ button.addEventListener('click', function (e) {
 
     localStorage.setItem('item', NewArr)
 
+    newToDos = todoItem;
+
     updateToDoList();
+
+    input.value = "";
   } else {
     alert('내용을 적어주세요.')
   }
@@ -30,7 +35,7 @@ function updateToDoList() {
 
   newToDos.forEach((data, i) => {
     $('.list').append(`
-    <li>
+    <li data-id="${i}">
       <span class="item">${data}</span>
       <div class="left">
         <a class="remove">
@@ -44,38 +49,20 @@ function updateToDoList() {
 }
 
 
-$('.remove').on('click', function () {
-  this.closest('li').remove()
-  const clickItem = $(this).parent().siblings('.item').text()
+$('.list').on('click', '.remove', function () {
 
-  if (newToDos.includes(clickItem)) {
-    newToDos = newToDos.filter(item => item !== clickItem);
+  const list = $(this).closest('li');
+  const listId = list.data('id');
+
+  console.log(listId)
+
+  list.remove();
+
+  if (newToDos[listId]) {
+    newToDos.splice(listId, 1);
   }
 
-  const NewArr = JSON.stringify(newToDos)
-  localStorage.setItem('item', NewArr)
+  const NewArr = JSON.stringify(newToDos);
+  localStorage.setItem('item', NewArr);
+});
 
-  console.log(newToDos)
-})
-
-// function removeItem(e) {
-
-//   const clickItem = $(e.target).siblings('.item ').html()
-
-//   let todoItem = localStorage.getItem('item');
-//   todoItem = JSON.parse(todoItem)
-
-//   if (todoItem.includes(clickItem)) {
-//     todoItem = todoItem.filter(item => item !== clickItem);
-//   }
-
-//   const NewArr = JSON.stringify(todoItem)
-
-//   localStorage.setItem('item', NewArr)
-
-//   updateToDoList();
-
-//   $(e.target).closest('li').remove();
-
-//   newToDos = todoItem;
-// }
